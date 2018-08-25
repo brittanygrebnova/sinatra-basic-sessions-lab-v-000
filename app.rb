@@ -9,12 +9,12 @@ class App < Sinatra::Base
   
   get '/' do
     @session = session
-    binding.pry
     erb :index
   end
   
   get '/checkout' do
     @item = params[:item]
+    binding.pry
     erb :checkout
   end
     
